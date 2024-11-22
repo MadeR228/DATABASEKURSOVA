@@ -1,35 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+using DATABASEKURSOVA.Properties;
 using MySql.Data.MySqlClient;
 
 namespace DATABASEKURSOVA
 {
     public partial class MainForm : Form
     {
+        private string connectionString;    // Рядок підключення
+        private string currentTable;        // Обрана таблиця
+
         private string server = "localhost"; // Сервер MySQL
         private string user = "root";        // Користувач
         private string password = "1234";   // Пароль
         private string database = "trolleydepot"; // Назва бази даних
-        private string connectionString;    // Рядок підключення
-        private string currentTable;        // Обрана таблиця
+        private string batFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "importbase.bat");
+
         private TablesSettings tables;
         private Columns columns;
         private FormFactory formFactory;    // Фабрика форм
+        private DatabaseAudit databaseAudit;
 
         public MainForm()
         {
             InitializeComponent();
             connectionString = $"Server={server};Database={database};User ID={user};Password={password};";
+
+            databaseAudit = new DatabaseAudit(connectionString);
             tables = new TablesSettings(connectionString);
             formFactory = new FormFactory(connectionString);
             columns = new Columns(connectionString);
+
+            Environment.SetEnvironmentVariable("DB_PASSWORD", password);
+
+
+            try
+            {
+                // Перевірка бази даних і запуск файлу .bat, якщо її не існує
+                databaseAudit.CheckAndRunBatFile(connectionString, database, batFilePath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка: {ex.Message}");
+            }
+
             tables.LoadTables(comboTables);
+
         }
 
-
+       
         // Подія TextChanged для пошуку
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
@@ -52,7 +75,7 @@ namespace DATABASEKURSOVA
         {
             if (string.IsNullOrEmpty(currentTable))
             {
-                MessageBox.Show("Выберите таблицу, чтобы добавить новую запись.", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Виберіть таблицю, щоб додати новий запис.", "Увага", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

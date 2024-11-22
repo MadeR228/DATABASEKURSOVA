@@ -39,7 +39,8 @@ namespace DATABASEKURSOVA
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Помилка: {ex.Message}", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Імпорт бази даних не хвилюйтесь)", "Імпорт", MessageBoxButtons.OK);
+                LoadTables(comboTables);
             }
         }
 
