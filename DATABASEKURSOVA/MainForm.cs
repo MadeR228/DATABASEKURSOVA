@@ -18,7 +18,7 @@ namespace DATABASEKURSOVA
         private string user = "root";        // Користувач
         private string password = "1234";   // Пароль
         private string database = "trolleydepot"; // Назва бази даних
-        private string batFilePath = @"C:\Users\User\source\repos\DATABASEKURSOVA\DATABASEKURSOVA\Database\importbase.bat";
+        private string batFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database", "importbase.bat");
 
         private TablesSettings tables;
         private Columns columns;
