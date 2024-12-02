@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2D7D1906A51B442F9466EA3C4BD3028A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_38D9FC2BB979498898E87D1DB8D88C7F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -123,12 +129,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_40E7826FE6454052B8270C51470DA4CB"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_44050388AADA016486744B96A2DC5CC5"
         "OwnerKey" = "8:_38D9FC2BB979498898E87D1DB8D88C7F"
         "MsmSig" = "8:_UNDEFINED"
@@ -137,12 +137,6 @@
         {
         "MsmKey" = "8:_44050388AADA016486744B96A2DC5CC5"
         "OwnerKey" = "8:_B700D0D0391790379068ABBC801F0591"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_474811B213AC45469BBDC9E98D6DE86F"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -321,6 +315,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_BCC1A00760914EC7809CD1071B733C3F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C1F852192CF9E841BA1AC82EE58C513C"
         "OwnerKey" = "8:_38D9FC2BB979498898E87D1DB8D88C7F"
         "MsmSig" = "8:_UNDEFINED"
@@ -341,12 +341,6 @@
         {
         "MsmKey" = "8:_E2BDB4B5A8C029302E6DEBFCA3744888"
         "OwnerKey" = "8:_38D9FC2BB979498898E87D1DB8D88C7F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AF95984DEA3C9F7196D113E1623D639E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -451,6 +445,12 @@
         "OwnerKey" = "8:_44050388AADA016486744B96A2DC5CC5"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AF95984DEA3C9F7196D113E1623D639E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -506,6 +506,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -564,6 +572,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2D7D1906A51B442F9466EA3C4BD3028A"
+            {
+            "SourcePath" = "8:..\\databasekursova\\database\\importbase.bat"
+            "TargetName" = "8:importbase.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_042871E6D76A4F20921DE6C860EDECB8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3991447D4E8A9A0AD09CFDF3E9F88613"
@@ -628,26 +656,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_40E7826FE6454052B8270C51470DA4CB"
-            {
-            "SourcePath" = "8:..\\DATABASEKURSOVA\\bin\\Debug\\importbase.bat"
-            "TargetName" = "8:importbase.bat"
-            "Tag" = "8:"
-            "Folder" = "8:_042871E6D76A4F20921DE6C860EDECB8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_44050388AADA016486744B96A2DC5CC5"
             {
             "AssemblyRegister" = "3:1"
@@ -677,26 +685,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_474811B213AC45469BBDC9E98D6DE86F"
-            {
-            "SourcePath" = "8:..\\DATABASEKURSOVA\\bin\\Debug\\trolleydepot.sql"
-            "TargetName" = "8:trolleydepot.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_042871E6D76A4F20921DE6C860EDECB8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5935246CDA3481FE49B17DE83854643D"
@@ -1040,6 +1028,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BCC1A00760914EC7809CD1071B733C3F"
+            {
+            "SourcePath" = "8:..\\databasekursova\\database\\trolleydepot.sql"
+            "TargetName" = "8:trolleydepot.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_042871E6D76A4F20921DE6C860EDECB8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C1F852192CF9E841BA1AC82EE58C513C"
             {
             "AssemblyRegister" = "3:1"
@@ -1190,7 +1198,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DataBaseViewer"
         "ProductCode" = "8:{226F8027-737F-4534-B9A9-F7731BAB5E0C}"
-        "PackageCode" = "8:{96F994D9-186B-4CED-AF42-6E1DD8A782E6}"
+        "PackageCode" = "8:{295EE99E-9765-4BB2-9764-4EE113CB1335}"
         "UpgradeCode" = "8:{FAE72F6D-3F5E-44F0-ADEC-A8E60E576B55}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
