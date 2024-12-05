@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using MySql.Data.MySqlClient;
 
 namespace DATABASEKURSOVA
@@ -16,6 +18,8 @@ namespace DATABASEKURSOVA
             InitializeComponent();
             this.connectionString = connectionString;
             this.currentTable = currentTable;
+
+            LoadEnumValues();
 
             // Якщо rowData не null, то це редагування, і ми заповнюємо поля
             if (rowData != null)
@@ -50,6 +54,39 @@ namespace DATABASEKURSOVA
                 this.Text = "Створення";
             }
         }
+
+        private void LoadEnumValues()
+        {
+            try
+            {
+                string query = $"SHOW COLUMNS FROM {currentTable} LIKE 'category'";
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string enumDefinition = reader["Type"].ToString();
+                                var matches = Regex.Matches(enumDefinition, "'(.*?)'");
+                                foreach (Match match in matches)
+                                {
+                                    comboBoxCategory.Items.Add(match.Groups[1].Value);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception) { }
+        }
+
+
+
+
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             try

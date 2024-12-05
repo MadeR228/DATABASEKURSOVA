@@ -82,9 +82,6 @@
             this.comboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxCategory.FormattingEnabled = true;
-            this.comboBoxCategory.Items.AddRange(new object[] {
-            "D",
-            "DE"});
             this.comboBoxCategory.Location = new System.Drawing.Point(127, 140);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(108, 25);
